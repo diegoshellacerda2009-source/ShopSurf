@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Roupas de Neoprene - Surf Shop</title>
+   
+
+    <style>
+        /* CSS interno da página */
+
+        body {
+            /* Estilo geral da página */
+
+            font-family: Arial, sans-serif;
+            /* Define a fonte */
+
+            margin: 0;
+            /* Remove margens externas */
+
+            padding: 0;
+            /* Remove espaçamentos internos */
+
+            background-color: #f2f2f2;
+            /* Cor de fundo */
+
+            color: #333;
+            /* Cor padrão do texto */
+        }
+
+        .product-image {
+            /* Classe das imagens dos produtos */
+
+            width: 50%;
+            /* Define largura da imagem */
+
+            height: 500px;
+            /* Define altura fixa */
+
+            object-fit: cover;
+            /* Faz a imagem preencher sem distorcer */
+
+            border-radius: 5px;
+            /* Arredonda os cantos */
+        }
+
+        header {
+            /* Cabeçalho da página */
+
+            background-color: #00aaff;
+            /* Cor de fundo */
+
+            color: white;
+            /* Cor do texto */
+
+            padding: 20px 0;
+            /* Espaçamento interno */
+
+            text-align: center;
+            /* Centraliza o texto */
+        }
+
+        .container {
+            /* Caixa principal de cada produto */
+
+            max-width: 900px;
+            /* Largura máxima */
+
+            margin: 30px auto;
+            /* Centraliza na tela */
+
+            padding: 20px;
+            /* Espaçamento interno */
+
+            background-color: white;
+            /* Fundo branco */
+
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            /* Sombra */
+
+            border-radius: 8px;
+            /* Bordas arredondadas */
+        }
+
+        h1 {
+            /* Estilo dos títulos */
+
+            color: #0077cc;
+            /* Cor azul */
+        }
+
+        .price {
+            /* Classe de preço */
+
+            font-size: 1.8em;
+            /* Aumenta tamanho */
+
+            color: #ff4500;
+            /* Cor laranja */
+
+            margin: 10px 0;
+            /* Espaçamento */
+        }
+
+        .description {
+            /* Área da descrição */
+
+            margin: 20px 0;
+            /* Espaçamento */
+
+            line-height: 1.6;
+            /* Espaço entre linhas */
+        }
+
+        .buy-button {
+            /* Botão comprar */
+
+            display: inline-block;
+            /* Permite largura e altura */
+
+            padding: 15px 30px;
+            /* Espaçamento interno */
+
+            background-color: #ff4500;
+            /* Cor do botão */
+
+            color: white;
+            /* Cor do texto */
+
+            text-decoration: none;
+            /* Remove sublinhado */
+
+            font-weight: bold;
+            /* Texto em negrito */
+
+            border-radius: 5px;
+            /* Bordas arredondadas */
+
+            transition: background-color 0.3s;
+            /* Animação suave */
+        }
+
+        .buy-button:hover {
+            /* Efeito ao passar mouse */
+
+            background-color: #e03e00;
+            /* Cor mais escura */
+        }
+
+        footer {
+            /* Rodapé */
+
+            text-align: center;
+            /* Centraliza */
+
+            padding: 15px 0;
+            /* Espaçamento */
+
+            margin-top: 40px;
+            /* Distância do conteúdo */
+
+            background-color: #00aaff;
+            /* Fundo azul */
+
+            color: white;
+            /* Texto branco */
+
+            border-top-left-radius: 8px;
+            /* Arredonda canto esquerdo */
+
+            border-top-right-radius: 8px;
+            /* Arredonda canto direito */
+        }
+
+        .preco-antigo {
+            /* Preço antigo */
+
+            text-decoration: line-through;
+            /* Cria risco no texto */
+
+            margin-right: 10px;
+            /* Espaço à direita */
+
+            font-weight: bold;
+            /* Negrito */
+        }
+
+        .preco-novo {
+            /* Novo preço */
+
+            color: #ff4500;
+            /* Cor destaque */
+
+            font-weight: bold;
+            /* Negrito */
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- Início do conteúdo visível -->
+
+    <header>
+        <!-- Cabeçalho da loja -->
+
+        <h1>Flow Surf CO</h1>
+        <!-- Nome da loja -->
+
+        <p>Onde a paixão pelo mar encontra estilo e desempenho</p>
+        <!-- Frase da empresa -->
+
+    </header>
+
+    <div class="container">
+    <!-- Caixa do primeiro produto -->
+
+        <img src="/site/imagens/Roupas.jpeg"
+             alt="Roupa de Neoprene"
+             class="product-image">
+        <!-- Imagem do produto -->
+
+        <h1>Roupas de Neoprene - Conforto e Resistência</h1>
+        <!-- Nome do produto -->
+
+        <p>
+            Preço:
+            <span class="preco-antigo">R$ 699,99</span>
+            <!-- Preço antigo -->
+
+            por
+
+            <span class="preco-novo">R$ 599,99</span>
+            <!-- Novo preço -->
+        </p>
+
+        <div class="description">
+        <!-- Área de descrição -->
+
+            <p>
+                Nossas roupas de neoprene foram desenvolvidas
+                para garantir conforto e liberdade de movimento.
+            </p>
+
+            <ul>
+            <!-- Lista de características -->
+
+                <li>Material: Neoprene premium flexível</li>
+
+                <li>Espessura: 3mm (versão padrão)</li>
+
+                <li>Resistente ao frio e ao vento</li>
+
+                <li>Design anatômico para máxima mobilidade</li>
+
+                <li>Perfeita para todos os níveis de surfistas</li>
+
+            </ul>
+        </div>
+
+        <a href="#" class="buy-button">
+            Comprar Agora
+        </a>
+        <!-- Botão de compra -->
+
+    </div>
+
+
+    <!-- SEGUNDO PRODUTO -->
+
+    <div class="container">
+
+        <img src="/site/imagens/roupa profissional.jpeg"
+             alt="Roupa de Neoprene Premium"
+             class="product-image">
+
+        <h1>Roupa de Neoprene Premium 5mm</h1>
+
+        <p>
+            Preço:
+            <span class="preco-antigo">R$ 999,99</span>
+
+            por
+
+            <span class="preco-novo">R$ 849,99</span>
+        </p>
+
+        <div class="description">
+
+            <p>
+                Ideal para surfistas avançados
+                que enfrentam águas frias.
+            </p>
+
+            <ul>
+
+                <li>Material: Neoprene Ultra Flex</li>
+
+                <li>Espessura: 5mm</li>
+
+                <li>Alta proteção térmica</li>
+
+                <li>Costura selada resistente à água</li>
+
+                <li>Indicada para surf profissional</li>
+
+            </ul>
+
+        </div>
+
+        <a href="#" class="buy-button">
+            Comprar Agora
+        </a>
+
+    </div>
+
+
+    <!-- TERCEIRO PRODUTO -->
+
+    <div class="container">
+
+        <img src="/site/imagens/roupafeminina.jpeg"
+             alt="Roupa Feminina de Neoprene"
+             class="product-image">
+
+        <h1>Roupa Feminina de Neoprene Flex</h1>
+
+        <p>
+            Preço:
+            <span class="preco-antigo">R$ 749,99</span>
+
+            por
+
+            <span class="preco-novo">R$ 649,99</span>
+        </p>
+
+        <div class="description">
+
+            <p>
+                Modelo feminino com design anatômico
+                e máxima liberdade de movimento.
+            </p>
+
+            <ul>
+
+                <li>Material: Neoprene Flexível Premium</li>
+
+                <li>Espessura: 3mm</li>
+
+                <li>Secagem rápida</li>
+
+                <li>Conforto e mobilidade</li>
+
+                <li>Ideal para clima moderado</li>
+
+            </ul>
+
+        </div>
+
+        <a href="#" class="buy-button">
+            Comprar Agora
+        </a>
+
+    </div>
+
+
+    <!-- QUARTO PRODUTO -->
+
+    <div class="container">
+
+        <img src="/site/imagens/roupa infantil.jpeg"
+             alt="Roupa Infantil de Neoprene"
+             class="product-image">
+
+        <h1>Roupa Infantil de Neoprene Kids</h1>
+
+        <p>
+            Preço:
+            <span class="preco-antigo">R$ 499,99</span>
+
+            por
+
+            <span class="preco-novo">R$ 399,99</span>
+        </p>
+
+        <div class="description">
+
+            <p>
+                Proteção e conforto para crianças
+                aproveitarem o mar com segurança.
+            </p>
+
+            <ul>
+
+                <li>Material: Neoprene leve e resistente</li>
+
+                <li>Espessura: 2mm</li>
+
+                <li>Proteção UV</li>
+
+                <li>Design confortável para crianças</li>
+
+                <li>Ideal para praia e surf</li>
+
+            </ul>
+
+        </div>
+
+        <a href="#" class="buy-button">
+            Comprar Agora
+        </a>
+
+    </div>
+
+
+    <footer>
+        <!-- Rodapé -->
+
+        &copy; 2026 Flow Surf CO - Todos os direitos reservados
+
+    </footer>
+
+</body>
+<!-- Fim do conteúdo -->
+
+</html>
+<!-- Fim do documento HTML -->

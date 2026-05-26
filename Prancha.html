@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prancha de Surfe - Surf Shop</title>
+   <style>
+
+       /* =========================
+   ESTILO GERAL
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: #00aaff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   IMAGEM PRINCIPAL
+========================= */
+
+.product-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.description {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+/* =========================
+   GRID DAS PRANCHAS
+========================= */
+
+.produtos-pranchas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* =========================
+   LINKS DOS PRODUTOS
+========================= */
+
+.produto-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   CARD DOS PRODUTOS
+========================= */
+
+.produto {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.produto:hover {
+    transform: scale(1.03);
+}
+
+/* =========================
+   IMAGENS DOS CARDS
+========================= */
+
+.produto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1, h3 {
+    color: #0077cc;
+}
+
+/* =========================
+   TEXTO DOS PRODUTOS
+========================= */
+
+.produto p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* =========================
+   PREÇOS
+========================= */
+
+.preco-antigo {
+    text-decoration: line-through;
+    margin-right: 10px;
+    font-weight: bold;
+    color: #888;
+}
+
+.preco-novo {
+    color: #ff4500;
+    font-weight: bold;
+}
+
+.price {
+    color: #ff4500;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.buy-button:hover {
+    background-color: #e03e00;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    background-color: #00aaff;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    .product-image {
+        height: 250px;
+    }
+
+    .produtos-pranchas {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        margin: 15px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+    <header>
+        <h1>Flow Surf CO</h1>
+
+        <p>Onde a paixão pelo mar encontra estilo e desempenho</p>
+    </header>
+
+    <div class="container">
+    <!-- Caixa principal -->
+
+        <img src="/site/imagens/Prancha.jpeg"
+             alt="Prancha de Surfe"
+             class="product-image">
+        <!-- Imagem principal -->
+
+        <h1>Prancha de Surfe - Alta Performance</h1>
+
+        <p>
+            Preço:
+            <span class="preco-antigo">R$ 3.620,00</span>
+
+            por
+
+            <span class="preco-novo">R$ 1.599,99</span>
+        </p>
+
+        <div class="description">
+        <!-- Área de descrição -->
+
+            <p>
+                Projetada para surfistas de todos os níveis,
+                perfeita para grandes ondas.
+            </p>
+
+            <ul>
+
+                <li>Comprimento: 6'2"</li>
+                <li>Largura: 20"</li>
+                <li>Espessura: 2,5"</li>
+                <li>Material: Epóxi leve e resistente</li>
+                <li>Ideal para todos os níveis de surfistas</li>
+            </ul>
+        </div>
+
+        <a href="#" class="buy-button">
+            Comprar Agora
+        </a>
+        <!-- Botão de compra -->
+
+    </div>
+
+
+    <div class="produtos-pranchas">
+    <!-- Área dos produtos -->
+
+        <!-- Prancha 1 -->
+        <a href="prancha1.html" class="produto-link">
+
+            <div class="produto">
+
+                <img src="/site/imagens/deck-sup-banana-wax.jpeg"
+                     alt="Prancha Alta Performance">
+
+                <h3>Prancha Alta Performance</h3>
+
+                <p>
+                    Projetada para velocidade e manobras radicais.
+                </p>
+
+                <ul>
+                    <li>Comprimento: 6'2"</li>
+                    <li>Largura: 20"</li>
+                    <li>Espessura: 2,5"</li>
+                    <li>Material: Epóxi de alta resistência</li>
+                    <li>Nível: Intermediário / Avançado</li>
+                </ul>
+
+                <p class="price">R$ 1.299,00</p>
+                
+
+                <a href="#" class="buy-button">
+                    Comprar Agora
+                </a>
+            </div>
+        </a>
+
+        <!-- Prancha 2 -->
+        <a href="prancha2.html" class="produto-link">
+
+            <div class="produto">
+
+                <img src="/site/imagens/Longboard.jpeg"
+                     alt="Prancha Longboard">
+
+                <h3>Prancha Longboard</h3>
+
+                <p>
+                    Ideal para ondas pequenas e médias.
+                </p>
+                <ul>
+                    <li>Comprimento: 9'0"</li>
+                    <li>Largura: 22"</li>
+                    <li>Espessura: 2,75"</li>
+                    <li>Material: Poliuretano com fibra de vidro</li>
+                    <li>Nível: Iniciante / Intermediário</li>
+
+                </ul>
+
+                <p class="price">R$ 1.499,00</p>
+
+                <a href="#" class="buy-button">
+                    Comprar Agora
+                </a>
+
+            </div>
+        </a>
+
+
+        <!-- Prancha 3 -->
+        <a href="prancha3.html" class="produto-link">
+
+            <div class="produto">
+
+                <img src="/site/imagens/prancha frufru.jpeg"
+                     alt="Prancha Funboard">
+
+                <h3>Prancha de Surf Funboard</h3>
+
+                <p>
+                    Combina estabilidade e versatilidade.
+                </p>
+
+                <ul>
+                    <li>Comprimento: 7'0"</li>
+                    <li>Largura: 21"</li>
+                    <li>Espessura: 2,6"</li>
+                    <li>Material: Epóxi resistente</li>
+                    <li>Nível: Iniciante / Intermediário</li>
+                </ul>
+
+                <p class="price">R$ 1.199,00</p>
+
+                <a href="#" class="buy-button">
+                    Comprar Agora
+                </a>
+
+            </div>
+        </a>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Surf Shop - Todos os direitos reservados
+    </footer>
+
+</body>
+
+</html>

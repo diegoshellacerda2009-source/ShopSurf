@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Surf Shop - Produtos</title>
+
+
+    <style>
+        /* CSS da página */
+
+        body {
+            /* Estilo geral do site */
+
+            font-family: Arial, sans-serif;
+            /* Define a fonte */
+
+            margin: 0;
+            /* Remove margem externa */
+
+            padding: 0;
+            /* Remove espaçamento interno */
+
+            background-color: #f2f2f2;
+            /* Cor de fundo */
+
+            color: #333;
+            /* Cor padrão do texto */
+        }
+
+        header {
+            /* Cabeçalho */
+
+            background-color: #00aaff;
+            /* Fundo azul */
+
+            color: white;
+            /* Texto branco */
+
+            padding: 20px 0;
+            /* Espaçamento interno */
+
+            text-align: center;
+            /* Centraliza conteúdo */
+        }
+
+        nav {
+            /* Área de navegação */
+
+            margin-top: 10px;
+            /* Espaço acima */
+        }
+
+        nav a {
+            /* Links do menu */
+
+            color: white;
+            /* Texto branco */
+
+            text-decoration: none;
+            /* Remove sublinhado */
+
+            margin: 0 15px;
+            /* Espaço lateral */
+
+            font-weight: bold;
+            /* Negrito */
+        }
+
+        nav a:hover {
+            /* Efeito ao passar mouse */
+
+            text-decoration: underline;
+            /* Adiciona sublinhado */
+        }
+
+        .container {
+            /* Caixa principal */
+
+            max-width: 800px;
+            /* Largura máxima */
+
+            margin: 30px auto;
+            /* Centraliza */
+
+            padding: 20px;
+            /* Espaçamento interno */
+
+            background-color: white;
+            /* Fundo branco */
+
+            border-radius: 8px;
+            /* Bordas arredondadas */
+
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            /* Sombra */
+        }
+
+        h1, h2 {
+            /* Títulos */
+
+            color: #0077cc;
+            /* Cor azul */
+        }
+
+        .product-image {
+            /* Imagem principal */
+
+            width: 100%;
+            /* Ocupa toda largura */
+
+            height: 400px;
+            /* Altura fixa */
+
+            object-fit: cover;
+            /* Ajusta sem distorcer */
+
+            border-radius: 8px;
+            /* Bordas arredondadas */
+        }
+
+        .description {
+            /* Área de descrição */
+
+            margin: 20px 0;
+            /* Espaçamento */
+
+            line-height: 1.6;
+            /* Espaço entre linhas */
+        }
+
+        .accessory-list {
+            /* Lista de acessórios */
+
+            list-style-type: square;
+            /* Marcadores quadrados */
+
+            padding-left: 20px;
+            /* Espaço da esquerda */
+        }
+
+        .price {
+            /* Classe de preço */
+
+            font-size: 1.5em;
+            /* Aumenta tamanho */
+
+            color: #ff4500;
+            /* Cor laranja */
+
+            margin: 10px 0;
+            /* Espaçamento */
+
+            font-weight: bold;
+            /* Negrito */
+        }
+
+        .preco-antigo {
+            /* Preço antigo */
+
+            text-decoration: line-through;
+            /* Risco no texto */
+
+            color: #888;
+            /* Cor cinza */
+
+            margin-right: 10px;
+            /* Espaço à direita */
+
+            font-weight: bold;
+            /* Negrito */
+        }
+
+        .preco-novo {
+            /* Novo preço */
+
+            color: #ff4500;
+            /* Cor laranja */
+
+            font-weight: bold;
+            /* Negrito */
+        }
+
+        .buy-button {
+            /* Botão comprar */
+
+            display: inline-block;
+            /* Permite largura e altura */
+
+            padding: 10px 20px;
+            /* Espaçamento interno */
+
+            background-color: #ff4500;
+            /* Fundo laranja */
+
+            color: white;
+            /* Texto branco */
+
+            text-decoration: none;
+            /* Remove sublinhado */
+
+            font-weight: bold;
+            /* Negrito */
+
+            border-radius: 5px;
+            /* Bordas arredondadas */
+
+            transition: background-color 0.3s;
+            /* Animação suave */
+
+            margin-top: 10px;
+            /* Espaço acima */
+        }
+
+        .buy-button:hover {
+            /* Hover do botão */
+
+            background-color: #e03e00;
+            /* Cor mais escura */
+        }
+
+        .produtos-grid {
+            /* Grade dos produtos */
+
+            display: grid;
+            /* Sistema de grid */
+
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            /* Cria colunas automáticas responsivas */
+
+            gap: 20px;
+            /* Espaço entre produtos */
+
+            margin-top: 20px;
+            /* Espaço acima */
+        }
+
+        .produto {
+            /* Card do produto */
+
+            background-color: white;
+            /* Fundo branco */
+
+            padding: 15px;
+            /* Espaçamento interno */
+
+            border-radius: 8px;
+            /* Bordas arredondadas */
+
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            /* Sombra */
+
+            text-align: center;
+            /* Centraliza texto */
+
+            transition: transform 0.3s;
+            /* Animação */
+        }
+
+        .produto:hover {
+            /* Hover do produto */
+
+            transform: scale(1.03);
+            /* Aumenta tamanho */
+        }
+
+        .produto img {
+            /* Imagens dos produtos */
+
+            width: 100%;
+            /* Largura total */
+
+            height: 200px;
+            /* Altura fixa */
+
+            object-fit: cover;
+            /* Ajusta imagem */
+
+            border-radius: 5px;
+            /* Bordas arredondadas */
+        }
+
+        .produto h3 {
+            /* Nome do produto */
+
+            color: #0077cc;
+            /* Azul */
+
+            margin: 10px 0;
+            /* Espaçamento */
+        }
+
+        .produto p {
+            /* Texto dos produtos */
+
+            line-height: 1.4;
+            /* Espaço entre linhas */
+
+            margin: 10px 0;
+            /* Espaçamento */
+        }
+
+        footer {
+            /* Rodapé */
+
+            text-align: center;
+            /* Centraliza */
+
+            padding: 15px 0;
+            /* Espaçamento */
+
+            margin-top: 40px;
+            /* Distância do conteúdo */
+
+            background-color: #00aaff;
+            /* Fundo azul */
+
+            color: white;
+            /* Texto branco */
+
+            border-top-left-radius: 8px;
+            /* Arredonda canto esquerdo */
+
+            border-top-right-radius: 8px;
+            /* Arredonda canto direito */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Flow Surf CO</h1>
+
+        <p>Onde a paixão pelo mar encontra estilo e desempenho</p>
+
+    </header>
+
+    <div class="container">
+
+        <img src="/site/imagens/Acessorio.jpeg"
+             alt="Acessórios de Surfe"
+             class="product-image">
+
+        <h1>Acessórios de Surfe - Complete Seu Kit</h1>
+
+        <p>
+            Preço:
+            <span class="preco-antigo">R$ 479,99</span>
+
+            por
+
+            <span class="preco-novo">R$ 229,99</span>
+        </p>
+
+        <div class="description">
+
+            <p>
+                Linha completa de acessórios essenciais
+                para surfistas.
+            </p>
+
+            <ul class="accessory-list">
+
+                <li>Leashes resistentes e confortáveis</li>
+
+                <li>Capas de proteção para pranchas</li>
+
+                <li>Parafinas de diferentes tipos</li>
+
+                <li>Racks e bolsas para transporte</li>
+
+                <li>Outros acessórios indispensáveis</li>
+
+            </ul>
+        </div>
+
+        <a href="#" class="buy-button">
+            Comprar Agora
+        </a>
+
+
+        <div class="container">
+
+            <h2>Kits de Surfe</h2>
+
+            <div class="produtos-grid">
+
+                <div class="produto">
+
+                    <img src="/site/ iniciante.jpeg"
+                         alt="Kit Iniciante">
+
+                    <h3>Kit Iniciante</h3>
+
+                    <ul>
+
+                        <li>
+                            <strong>Prancha:</strong>
+                            Funboard, estável e fácil de manobrar
+                        </li>
+
+                        <li>
+                            <strong>Acessórios:</strong>
+                            Leash e parafina
+                        </li>
+
+                        <li>
+                            <strong>Nível recomendado:</strong>
+                            Iniciante
+                        </li>
+
+                        <li>
+                            <strong>Uso ideal:</strong>
+                            Ondas pequenas e médias
+                        </li>
+
+                        <li>
+                            <strong>Preço:</strong>
+                            R$ 1.299,00
+                        </li>
+
+                    </ul>
+
+                    <a href="#" class="buy-button">
+                        Comprar Agora
+                    </a>
+
+                </div>
+
+                <div class="produto">
+
+                    <img src="/site/imagens/Kit intermediário.jpeg"
+                         alt="Kit Intermediário">
+
+                    <h3>Kit Intermediário</h3>
+
+                    <ul>
+
+                        <li>
+                            <strong>Prancha:</strong>
+                            Shortboard
+                        </li>
+
+                        <li>
+                            <strong>Acessórios:</strong>
+                            Roupa de neoprene e capa acolchoada
+                        </li>
+
+                        <li>
+                            <strong>Nível recomendado:</strong>
+                            Intermediário
+                        </li>
+
+                        <li>
+                            <strong>Uso ideal:</strong>
+                            Ondas médias a grandes
+                        </li>
+
+                        <li>
+                            <strong>Preço:</strong>
+                            R$ 1.899,00
+                        </li>
+
+                    </ul>
+
+                    <a href="#" class="buy-button">
+                        Comprar Agora
+                    </a>
+
+                </div>
+
+                <div class="produto">
+
+                    <img src="/site/imagens/Kit avançado.jpeg"
+                         alt="Kit Profissional">
+
+                    <h3>Kit Profissional</h3>
+
+                    <ul>
+
+                        <li>
+                            <strong>Prancha:</strong>
+                            Alta Performance
+                        </li>
+
+                        <li>
+                            <strong>Acessórios:</strong>
+                            Roupa completa, leash e capa premium
+                        </li>
+
+                        <li>
+                            <strong>Nível recomendado:</strong>
+                            Avançado / Profissional
+                        </li>
+
+                        <li>
+                            <strong>Uso ideal:</strong>
+                            Ondas grandes e tubulares
+                        </li>
+
+                        <li>
+                            <strong>Preço:</strong>
+                            R$ 2.499,00
+                        </li>
+
+                    </ul>
+
+                    <a href="#" class="buy-button">
+                        Comprar Agora
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+    <footer>
+
+        &copy; 2026 Surf Shop - Todos os direitos reservados
+
+    </footer>
+
+</body>
+</html>

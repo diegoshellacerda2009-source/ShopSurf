@@ -1,0 +1,203 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surf Shop</title> 
+  <link rel="stylesheet" href="style.css">
+
+</head> 
+<body> 
+
+  
+  <header>
+
+    <button id="menuToggle">☰</button>
+
+    <button id="themeBtn">🌙</button>
+
+
+    <h1> Flow Surf CO</h1>
+
+    <nav> <!-- Área de navegação -->
+
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="/site/sobre.html">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <!-- Seção inicial/banner -->
+  <section id="home" class="banner">
+
+    <div class="banner-content">
+      <h2>Surfe com estilo e qualidade</h2>
+      <p>
+        As melhores pranchas, roupas e acessórios para dominar as ondas!
+      </p>
+
+      <button id="mensagemBtn">
+        Veja nossas promoções
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- Seção de produtos -->
+  <section id="produtos">
+
+    <h2>Nossos Produtos</h2>
+
+    <div class="grid-produtos">
+    <!-- Div usada para organizar os produtos em grade -->
+
+      <!-- Produto 1 -->
+      <div class="produto">
+
+        <a href="Prancha.html" class="produto-link">
+        <!-- Link para página do produto -->
+
+          <img src="/site/imagens/Prancha.jpeg" alt="Prancha de Surfe">
+          <!-- Imagem do produto -->
+
+          <h3>Prancha de Surfe</h3>
+
+          <p>
+            Alta performance para todos os níveis,
+            perfeita para grandes ondas.
+          </p>
+
+        </a>
+      </div>
+
+      <div class="produto">
+
+        <a href="roupa.html" class="produto-link">
+
+          <img src="/site/imagens/Roupas.jpeg" alt="Roupas de Neoprene">
+          <!-- Imagem do produto -->
+
+          <h3>Roupas de Neoprene</h3>
+          <!-- Nome do produto -->
+
+          <p>
+            Confortáveis, resistentes e ideais
+            para surfar em qualquer clima.
+          </p>
+
+        </a>
+      </div>
+
+      <div class="produto">
+
+        <a href="Acesso.html" class="produto-link">
+        <!-- Link do produto -->
+
+          <div class="produto">
+          <!-- Div interna -->
+
+            <img src="/site/imagens/Acessorio.jpeg" alt="Acessórios de Surfe">
+            <!-- Imagem -->
+
+            <h3>Acessórios</h3>
+
+            <p>
+              Leashes, capas, parafinas e muito mais
+              para completar seu kit.
+            </p>
+
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre">
+
+    <h2>Sobre Nós</h2>
+
+    <p>
+      No coração de cada onda, existe uma paixão —
+      e essa paixão é o que nos move.
+    </p>
+
+  </section>
+
+  <!-- Seção contato -->
+  <section id="contato" class="contato">
+
+    <h2>Fale Conosco</h2>
+
+    <form id="formContato">
+    <!-- Formulário de contato -->
+
+      <label for="nome">Nome:</label>
+      <!-- Texto do campo nome -->
+
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        placeholder="Seu nome"
+        required>
+      <!-- Campo de texto obrigatório -->
+
+      <label for="email">Email:</label>
+      <!-- Texto do campo email -->
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="seu@email.com"
+        required>
+      <!-- Campo de email obrigatório -->
+
+      <label for="mensagem">Mensagem:</label>
+      <!-- Texto do campo mensagem -->
+
+      <textarea
+        id="mensagem"
+        name="mensagem"
+        placeholder="Escreva sua mensagem"
+        required>
+      </textarea>
+      <!-- Área de texto -->
+
+      <button type="submit">
+        Enviar 📨
+      </button>
+
+    </form>
+  </section>
+
+  <footer>
+
+    <p>
+      &copy; 2026 Surf Shop.
+      Todos os direitos reservados 🌊
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Conecta o arquivo JavaScript -->
+
+  <script>
+
+    window.alert(
+      'Seja bem-vindo à melhor loja de itens para surfe do Brasil! 😘'
+    );
+    <!-- Mostra uma mensagem ao abrir o site -->
+
+  </script>
+
+</body>
+
+</html> 

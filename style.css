@@ -1,0 +1,388 @@
+
+
+/* 
+* Seleciona TODOS os elementos da página
+* margin: remove margens padrão
+* padding: remove espaçamentos internos padrão
+* box-sizing: faz largura e altura incluírem padding e borda
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+Configurações gerais do corpo da página
+font-family: define a fonte
+line-height: espaço entre linhas
+color: cor padrão do texto
+background-color: cor de fundo da página
+*/
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #033e6b;
+  background-color: #e0f7fa;
+}
+
+
+/* HEADER */
+
+/* 
+Estiliza o cabeçalho
+background: cria degradê
+color: cor do texto
+padding: espaçamento interno
+display:flex: coloca itens lado a lado
+justify-content: separa os elementos
+align-items: alinha verticalmente
+flex-wrap: quebra linha se faltar espaço
+*/
+header {
+  background: linear-gradient(to right, #00bcd4, #00796b);
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+/* 
+Estiliza a lista do menu
+list-style:none remove bolinhas
+display:flex deixa horizontal
+gap cria espaço entre itens
+*/
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* 
+Estilo dos links do menu
+color: cor branca
+text-decoration:none remove sublinhado
+font-weight:bold deixa em negrito
+transition cria animação suave
+*/
+nav ul.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* 
+Efeito ao passar mouse no menu
+hover = quando mouse passa em cima
+*/
+nav ul.menu li a:hover {
+  color: #ffeb3b;
+  text-shadow: 0 0 5px #ffeb3b;
+}
+
+
+/* 
+Seção principal com imagem de fundo
+position:relative permite posicionar elementos internos
+background coloca imagem
+no-repeat evita repetição
+center/cover centraliza e cobre toda área
+height define altura
+display:flex centraliza conteúdo
+*/
+.banner {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3VyZiUyMGJlYWNofGVufDB8fDB8fA%3D%3D&w=1080&q=80') no-repeat center/cover;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* 
+Caixa escura transparente atrás do texto
+rgba define transparência
+padding cria espaço interno
+border-radius arredonda cantos
+*/
+.banner-content {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* 
+Botão do banner
+*/
+.banner button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* 
+Efeito hover do botão
+*/
+.banner button:hover {
+  background-color: #e68900;
+}
+
+
+/* PRODUTOS */
+
+/* 
+Seção produtos
+padding cria espaçamento
+max-width limita largura máxima
+margin:auto centraliza
+*/
+section#produtos {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 
+Grid dos produtos
+display:grid cria grade
+grid-template-columns ajusta automaticamente
+gap cria espaço entre cards
+*/
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* 
+Card de produto
+background transparente branco
+box-shadow cria sombra
+transition cria animação suave
+*/
+.produto {
+  background-color: #ffffffdd;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* 
+Efeito ao passar mouse no produto
+translateY move para cima
+*/
+.produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* 
+Imagem do produto
+width:100% ocupa toda largura
+border-radius arredonda
+margin-bottom cria espaço abaixo
+*/
+.produto img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* 
+Remove decoração do link
+inherit mantém cor original
+*/
+.produto-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 
+Efeito no link do produto
+scale aumenta tamanho
+*/
+.produto-link:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+
+/* SOBRE */
+
+/* 
+Estiliza seção sobre
+border-top/bottom adiciona bordas
+*/
+.sobre {
+  padding: 60px 20px;
+  background-color: #b2ebf2;
+  text-align: center;
+  border-top: 3px solid #00bcd4;
+  border-bottom: 3px solid #00bcd4;
+}
+
+
+/* CONTATO */
+
+/* 
+Área do formulário
+*/
+.contato {
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* 
+Formulário organizado em coluna
+gap cria espaço entre campos
+*/
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 
+Inputs e textarea
+border define borda
+font-size tamanho da letra
+*/
+form input,
+form textarea {
+  padding: 12px;
+  border: 1px solid #00796b;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* 
+Botão do formulário
+cursor:pointer mostra mãozinha
+*/
+form button {
+  padding: 12px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* 
+Hover do botão
+*/
+form button:hover {
+  background-color: #004d40;
+}
+
+
+/* FOOTER */
+
+/* 
+Rodapé da página
+*/
+footer {
+  background-color: #033e6b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* TEMA ESCURO */
+
+/* 
+Altera fundo e texto no tema escuro
+*/
+body.dark-theme {
+  background-color: #1fa89d;
+  color: #331ebc;
+}
+
+/* 
+Header no tema escuro
+*/
+body.dark-theme header {
+  background: linear-gradient(to right, #17066c, #002769);
+}
+
+/* 
+Footer no tema escuro
+*/
+body.dark-theme footer {
+  background-color: #004d40;
+}
+
+/* 
+Banner no tema escuro
+*/
+body.dark-theme .banner-content {
+  background-color: rgba(0,0,0,0.6);
+}
+
+
+/* RESPONSIVIDADE */
+
+/* 
+@media aplica estilos em telas menores
+max-width:768px = celular/tablet
+*/
+@media (max-width: 768px) {
+
+  /* 
+  Header fica em coluna
+  */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* 
+  Menu fica vertical
+  */
+  nav ul.menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+/* MENU */
+
+/* 
+Menu padrão horizontal
+*/
+nav ul.menu {
+  display: flex;
+  gap: 20px;
+}
+
+/* 
+Classe active usada no JavaScript
+display:block mostra menu
+*/
+nav ul.menu.active {
+  display: block;
+}
